@@ -24,6 +24,10 @@ app.get('/about', (req, res) => {
   res.send("About Page");
 });
 
+app.get('/health', (req, res) => {
+  res.send("OK");
+});
+
 app.get('/contact', (req, res) => {
   res.send("Contact Page");
 });
