@@ -1,9 +1,18 @@
 const express = require('express');
 
+
+function calculate(n) {
+  return 1 + calculate(n-1);
+}
+
 const app = express();
 
 app.get('/',(req,res)=>{
   res.send("Hello World");
+})
+
+app.get('/cpu/:n',(req,res)=> {
+  return res.send(calculate(req.params.n))
 })
 
 app.get('/ip',(req,res)=> {
